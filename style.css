@@ -1,0 +1,1481 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.main-container {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: rgb(23, 22, 32);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 8% 84% 8%;
+}
+
+.main-header {
+    height: 100%;
+    grid-column: span 12;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100%;
+    background: rgba(43, 44, 62, 0.5);
+}
+
+.header-logo {
+    height: 6vh;
+    margin: auto;
+    grid-row: 1;
+    grid-column: span 2;
+}
+
+.about-me-main-div {
+    margin-right: 3vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 13;
+    grid-column-end: 13;
+}
+
+.about-me-text {
+    width: 8.5vh;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    color: white;
+    font-size: 1.5vh;
+    font-family: "Montserrat", sans-serif;
+    margin: auto;
+}
+
+.burger-container {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    padding: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 3vh;
+    height: 0.3vh;
+    background-color: rgb(255, 255, 255);
+    margin: 0.75vh 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.main-aside {
+    grid-column: span 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50% 50%;
+}
+
+.search-area {
+    grid-row: 1;
+    grid-column: span 12;
+    background: rgba(43, 44, 62, 0.5);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 20% 10% 70%;
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    margin-top: 1.5vh;
+    margin-bottom: 0.75vh;
+}
+
+.search-header-div {
+    grid-row: 1;
+    grid-column: span 12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-header {
+    color: white;
+    font-size: 2.5vh;
+    font-family: "Montserrat", sans-serif;
+}
+
+.search-input-btn-div {
+    grid-row: 2;
+    grid-column: span 12;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-input {
+    margin: 0.5vh;
+}
+
+.btn-search {
+    margin: 0.5vh;
+}
+
+.coin-found {
+    grid-column: span 12;
+    grid-row: 3;
+}
+
+.choosen-coin-area {
+    grid-row: 2;
+    grid-column: span 12;
+    background: rgba(43, 44, 62, 0.5);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 20% 80%;
+    border-radius: 1vh;
+    margin-top: 0.75vh;
+    margin-bottom: 1.5vh;
+}
+
+.selected-coins-header {
+    color: white;
+    font-size: 2.5vh;
+    font-family: "Montserrat", sans-serif;
+}
+
+.choosen-coin-header-div {
+    grid-row: 1;
+    grid-column: span 12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choosen-coins-aside-area-div {
+    padding: 1vh;
+    grid-column: span 12;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.D-E-I {
+    color: rgb(35, 110, 175);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8vh;
+}
+
+.aside-each-coin-div {
+    grid-column: span 12;
+    background: linear-gradient(
+        270deg,
+        rgba(226, 226, 226, 0),
+        rgba(226, 226, 226, 0.1)
+    );
+    display: grid;
+    height: 3em;
+    grid-template-columns: repeat(12, 1fr);
+    border-radius: 10px;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+
+.coin-code-name-aside {
+    margin: 0vh;
+    padding-left: 1vh;
+    grid-column: span 8;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5vh;
+    color: white;
+}
+
+.coin-icon {
+    grid-column-start: 12;
+    margin: 0vh 0vh;
+    padding-right: 1.5vh 1.5vh;
+}
+
+.main-main {
+    grid-column: span 10;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    margin-left: 1.5vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50% 50%;
+}
+
+.coin-info {
+    grid-column: span 12;
+    grid-row: 1;
+    margin-bottom: 0.75vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row: 100%;
+}
+
+.Currency-rate {
+    grid-row: 1;
+    grid-column: span 2;
+    background: rgba(43, 44, 62, 0.5);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 20% 80%;
+    border-radius: 1vh;
+    margin-right: 1vh;
+}
+
+.main-para-head-div {
+    grid-column: span 12;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-para-Currency-rate {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 2.5vh;
+}
+
+.Currency-usd-eur-ils {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    grid-column: span 12;
+}
+
+.para-Currency-rate-usd {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6vh;
+    color: white;
+    grid-row: 1;
+    margin: auto;
+}
+
+.Currency-rate-usd {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6vh;
+    color: white;
+    grid-row: 1;
+    margin: auto;
+}
+
+.coin-currency {
+    margin: 0;
+}
+
+.para-Currency-rate-eur {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6vh;
+    color: white;
+    grid-row: 2;
+    margin: auto;
+}
+
+.Currency-rate-eur {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6vh;
+    color: white;
+    grid-row: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: auto;
+}
+
+.para-Currency-rate-ils {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6vh;
+    color: white;
+    grid-row: 3;
+    margin: auto;
+}
+
+.Currency-rate-ils {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6vh;
+    color: white;
+    grid-row: 3;
+    margin: auto;
+}
+
+.chart {
+    grid-row: 1;
+    grid-column: span 10;
+    margin-left: 0.5vh;
+    background: rgba(43, 44, 62, 0.5);
+    border-bottom-left-radius: 1vh;
+    border-top-left-radius: 1vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 20% 80%;
+}
+
+.chart-header-div {
+    height: 100%;
+    grid-column: span 12;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.chart-header-coin-name {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 2.5vh;
+    grid-row: 1;
+    grid-column: span 12;
+}
+
+.btn-left-div {
+    color: white;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    margin-top: 50%;
+    font-size: 6vh;
+    text-align: center;
+}
+
+.canvasjs-chart-canvas {
+    grid-row: 2;
+    position: relative;
+}
+
+.chart-header-div {
+    grid-row: 1;
+}
+.btn-left-content {
+    cursor: pointer;
+}
+
+.chart-info {
+    grid-column: span 10;
+    grid-row: 2;
+}
+
+.chartContainer {
+    grid-column: span 10;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-right-div {
+    color: white;
+    grid-row: 2;
+    grid-column-end: 13;
+    margin-top: 50%;
+    font-size: 6vh;
+    text-align: center;
+}
+
+.btn-right-content {
+    cursor: pointer;
+}
+
+.coins-show {
+    margin-top: 0.75vh;
+    grid-column: span 12;
+    background: rgba(43, 44, 62, 0.5);
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    overflow-x: auto;
+    padding: 2vh;
+    border-bottom-left-radius: 1vh;
+    border-top-left-radius: 1vh;
+}
+
+::-webkit-scrollbar {
+    width: 1vh;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(43, 44, 62, 0.5);
+    border-radius: 1vh;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(70, 70, 95, 0.5);
+    border-radius: 1vh;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(115, 115, 155, 0.5);
+}
+
+.coin-container {
+    border-radius: 1vh;
+    margin: 0.75vh;
+    width: 18vh;
+    height: 18vh;
+    display: flex;
+    flex-direction: column;
+    background: rgb(226, 226, 226, 0.1);
+    transition: 0.5s;
+    padding: 1vh;
+}
+
+.coin-info-toggle {
+    border-radius: 10px;
+    margin: 0.75vh;
+    width: 18vh;
+    height: 18vh;
+    display: flex;
+    flex-direction: column;
+    background: rgb(226, 226, 226, 0.25);
+    transition: 0.5s;
+    padding: 1vh;
+    border: 1px solid rgb(230, 230, 230, 0.3);
+}
+
+.coin-container:hover {
+    background: rgb(100, 100, 100);
+}
+
+.coin-container > .coin-code-name {
+    color: rgba(240, 240, 240, 0.8);
+    margin: auto;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8vh;
+}
+.coin-info-toggle > .coin-code-name {
+    color: rgba(72, 255, 0, 0.8);
+    justify-self: center;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8vh;
+}
+
+.coin-code-name-toggle {
+    color: rgba(240, 240, 240, 0.8);
+    grid-column-start: 2;
+    grid-row: 1;
+    margin: auto;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8vh;
+}
+
+.coin-container > .coin-name {
+    margin: auto;
+    color: rgba(240, 240, 240, 0.8);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1vh;
+}
+
+.coin-info-toggle > .coin-name {
+    color: rgba(240, 240, 240, 0.8);
+    justify-self: flex-start;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1vh;
+    display: none;
+}
+
+.coin-info-toggle > .usd-currency-more-info {
+    color: white;
+    justify-self: flex-end;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.coin-info-toggle > .eur-currency-more-info {
+    color: white;
+    justify-self: flex-end;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+.coin-info-toggle > .ils-currency-more-info {
+    color: white;
+    justify-self: flex-end;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.btn-primary {
+    grid-column: span 12;
+    grid-row: 3;
+    margin: auto;
+    height: 2.5vh;
+    cursor: pointer;
+    font-size: 1vh;
+}
+.coin-info-toggle > .btn-primary {
+    grid-column: span 12;
+    background-color: rgb(145, 145, 145);
+    grid-row: 3;
+    margin: auto;
+    height: 2.5vh;
+    cursor: pointer;
+    font-size: 1vh;
+}
+
+.form-check {
+    grid-column: span 12;
+    grid-row: 4;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-check-input {
+    background-color: rgb(145, 145, 145);
+}
+
+.coin-from-search {
+    padding: 1vh;
+    grid-row: 3;
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 25% 25% 25% 25%;
+}
+
+.each-coin-from-search {
+    grid-column: span 12;
+    background: linear-gradient(
+        270deg,
+        rgba(226, 226, 226, 0),
+        rgba(226, 226, 226, 0.1)
+    );
+    display: grid;
+    height: 3em;
+    grid-template-columns: repeat(12, 1fr);
+    border-radius: 10px;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+
+.id-from-search {
+    margin: 0vh;
+    padding-left: 1vh;
+    grid-column: span 8;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6vh;
+    color: white;
+}
+
+.symbol-from-search {
+    margin: 0vh;
+    padding-left: 1vh;
+    grid-column: span 2;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6vh;
+    color: white;
+}
+
+.icon-from-search {
+    grid-column-start: 12;
+    margin: 0vh 0vh;
+    padding-right: 1.5vh 1.5vh;
+}
+
+.main-footer {
+    height: 100%;
+    grid-column: span 12;
+    grid-row: 3;
+    background: rgba(43, 44, 62, 0.5);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100%;
+}
+
+.footer-text-div {
+    margin: auto;
+    grid-column: span 12;
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5vh;
+}
+
+.hide-about-me-main-div {
+    display: inherit;
+    margin-top: 25vh;
+    position: absolute;
+    z-index: 55;
+    color: white;
+    width: 100vw;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100%;
+}
+
+.about-me-content-div {
+    height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background: rgb(245, 245, 245);
+    border-top-left-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+    color: rgb(23, 22, 32);
+    display: flex;
+    padding: 2vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me-img-div {
+    grid-row: 1;
+    grid-column-start: 4;
+    grid-column-end: 13;
+    overflow: hidden;
+    background-image: url(./images/post/logo1.152.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+}
+
+.about-me-text-content {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6vh;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////// */
+
+@media only screen and (max-width: 1024px) {
+    .main-container {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: rgb(23, 22, 32);
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 5% 30% 30% 35%;
+    }
+
+    .about-me-main-div {
+        margin-right: 1vh;
+    }
+
+    .about-me-text {
+        margin-left: 4vh;
+        width: 8.5vh;
+    }
+
+    .main-header {
+        border-bottom: 1px solid rgba(230, 230, 230, 0.8);
+    }
+
+    .header-logo {
+        height: 3.5vh;
+        padding-left: 1vh;
+    }
+
+    .main-aside {
+        grid-column: span 12;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 100%;
+    }
+
+    .search-area {
+        display: grid;
+        grid-row: 35% 10% 55%;
+        border-radius: 0vh;
+        border-right: 1px solid rgba(230, 230, 230, 0.5);
+        margin: 0;
+        grid-row: 1;
+        grid-column-start: 0;
+        grid-column-end: 7;
+    }
+
+    .search-header {
+        font-size: 2vh;
+    }
+
+    .search-input {
+        margin: 0.5vh;
+        width: 12vh;
+        height: 3vh;
+    }
+
+    .btn-search {
+        margin: 1vh;
+        height: 3vh;
+        width: 5vh;
+        padding: 0;
+    }
+
+    .coin-found {
+        grid-column: span 12;
+        grid-row: 3;
+    }
+
+    .choosen-coin-area {
+        margin: 0;
+        grid-row: 1;
+        grid-column-start: 7;
+        grid-column-end: 13;
+        background: rgba(43, 44, 62, 0.5);
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 20% 80%;
+        border-radius: 0;
+    }
+
+    .selected-coins-header {
+        font-size: 2vh;
+    }
+
+    .aside-each-coin-div {
+        height: 2em;
+        width: 80%;
+    }
+
+    .coin-icon {
+        height: 2.2vh;
+    }
+
+    .main-main {
+        margin: 0;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        grid-column: span 12;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 50% 50%;
+    }
+
+    .coin-info {
+        grid-column: span 12;
+        grid-row: 1;
+        margin-bottom: 0.75vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 40% 60%;
+        margin: 0;
+        border-top: 1px solid rgba(230, 230, 230, 0.5);
+        border-bottom: 1px solid rgba(230, 230, 230, 0.5);
+    }
+
+    .Currency-rate {
+        margin: 0;
+        grid-row: 1;
+        grid-column: span 12;
+        background: rgba(43, 44, 62, 0.5);
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 20% 80%;
+    }
+
+    .main-para-head-div {
+        grid-column: span 12;
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-para-Currency-rate {
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        font-size: 2vh;
+        margin-top: 2.5vh;
+    }
+
+    .Currency-usd-eur-ils {
+        padding: 1vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 33.33% 33.33% 33.33%;
+        grid-column: span 12;
+    }
+
+    .para-Currency-rate-usd {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6vh;
+        color: white;
+        grid-row: 1;
+        margin: auto;
+    }
+
+    .Currency-rate-usd {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6vh;
+        color: white;
+        grid-row: 1;
+        margin: auto;
+    }
+
+    .coin-currency {
+        margin: 0;
+    }
+
+    .para-Currency-rate-eur {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6vh;
+        color: white;
+        grid-row: 2;
+        margin: auto;
+    }
+
+    .Currency-rate-eur {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6vh;
+        color: white;
+        grid-row: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin: auto;
+    }
+
+    .para-Currency-rate-ils {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6vh;
+        color: white;
+        grid-row: 3;
+        margin: auto;
+    }
+
+    .Currency-rate-ils {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6vh;
+        color: white;
+        grid-row: 3;
+        margin: auto;
+    }
+
+    .chart {
+        padding: 1vh;
+        border-top: 1px solid rgba(230, 230, 230, 0.5);
+        margin: 0;
+        border-radius: 0;
+        grid-row: 2;
+        grid-column: span 12;
+    }
+
+    .chart-header-coin-name {
+        font-size: 2vh;
+    }
+
+    .chart-coin-icon {
+        width: 2.5vh;
+    }
+
+    .coins-show {
+        border-radius: 0vh;
+        padding: 2vh;
+        row-gap: 2vh;
+        grid-column: span 12;
+        background: rgba(43, 44, 62, 0.5);
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        overflow-x: auto;
+        width: 100%;
+        margin: 0;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: rgba(43, 44, 62, 0.5);
+        border-radius: 0;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(70, 70, 95, 0.5);
+        border-radius: 0;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(115, 115, 155, 0.5);
+    }
+
+    .coin-container {
+        border-radius: 1vh;
+        width: 16vh;
+        height: 16vh;
+        display: flex;
+        flex-direction: column;
+        background: rgb(226, 226, 226, 0.1);
+        transition: 0.5s;
+        padding: 1vh;
+        margin: auto;
+    }
+
+    .coin-info-toggle {
+        border-radius: 1vh;
+        width: 16vh;
+        height: 16vh;
+        display: flex;
+        flex-direction: column;
+        background: rgb(226, 226, 226, 0.25);
+        transition: 0.5s;
+        border: 1px solid rgb(230, 230, 230, 0.3);
+        margin: auto;
+    }
+
+    .coin-info-toggle > .coin-code-name {
+        color: rgba(72, 255, 0, 0.8);
+        justify-self: center;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.8vh;
+        margin: auto;
+    }
+
+    .coin-code-name-toggle {
+        color: rgba(240, 240, 240, 0.8);
+        grid-column-start: 2;
+        grid-row: 1;
+        margin: auto;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.8vh;
+    }
+
+    .coin-container > .coin-name {
+        margin: auto;
+        color: rgba(240, 240, 240, 0.8);
+        font-family: "Montserrat", sans-serif;
+        font-size: 1vh;
+    }
+
+    .coin-info-toggle > .coin-name {
+        color: rgba(240, 240, 240, 0.8);
+        justify-self: flex-start;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1vh;
+        display: none;
+    }
+
+    .coin-info-toggle > .usd-currency-more-info {
+        font-size: 1.15vh;
+        color: white;
+        justify-self: flex-end;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .coin-info-toggle > .eur-currency-more-info {
+        font-size: 1.15vh;
+        color: white;
+        justify-self: flex-end;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+    }
+    .coin-info-toggle > .ils-currency-more-info {
+        font-size: 1.15vh;
+        color: white;
+        justify-self: flex-end;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .btn-primary {
+        grid-column: span 12;
+        grid-row: 3;
+        margin: auto;
+        height: 2.5vh;
+        cursor: pointer;
+        font-size: 1vh;
+    }
+    .coin-info-toggle > .btn-primary {
+        grid-column: span 12;
+        background-color: rgb(145, 145, 145);
+        grid-row: 3;
+        margin: auto;
+        height: 2.5vh;
+        cursor: pointer;
+        font-size: 1vh;
+    }
+
+    .each-coin-from-search {
+        height: 2em;
+        width: 80%;
+    }
+
+    .icon-from-search {
+        height: 2.2vh;
+    }
+
+    .hide-about-me-main-div {
+        display: inherit;
+        position: absolute;
+        z-index: 55;
+        color: white;
+        width: 100vw;
+        height: 25vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 30% 70%;
+    }
+
+    .about-me-content-div {
+        height: 100%;
+        grid-row: 1;
+        grid-column: span 12;
+        background: rgb(245, 245, 245);
+        border-top-left-radius: 1vh;
+        border-top-right-radius: 1vh;
+        border-bottom-left-radius: 0vh;
+        color: rgb(23, 22, 32);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-me-img-div {
+        border-bottom-left-radius: 1vh;
+        grid-row: 2;
+        height: 25vh;
+        margin: 0vh;
+        grid-column: span 12;
+        background-image: url(./images/post/logo1.152.png);
+        background-size: cover;
+    }
+
+    .about-me-text-content {
+        font-size: 1vh;
+        margin: 0;
+    }
+
+    .main-footer {
+        display: none;
+    }
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+
+@media only screen and (max-width: 375px) {
+    .main-container {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: rgb(23, 22, 32);
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 5% 30% 40% 25%;
+    }
+
+    .about-me-main-div {
+        margin-right: 1vh;
+    }
+
+    .about-me-text {
+        margin-left: 4vh;
+        width: 8.5vh;
+    }
+
+    .main-header {
+        border-bottom: 1px solid rgba(230, 230, 230, 0.8);
+    }
+
+    .header-logo {
+        height: 3.5vh;
+        padding-left: 1vh;
+    }
+
+    .main-aside {
+        grid-column: span 12;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 100%;
+    }
+
+    .search-area {
+        border-radius: 0vh;
+        border-right: 1px solid rgba(230, 230, 230, 0.5);
+        margin: 0;
+        grid-row: 1;
+        grid-column-start: 0;
+        grid-column-end: 7;
+    }
+
+    .search-header {
+        font-size: 2vh;
+    }
+
+    .search-input {
+        margin: 0.5vh;
+        width: 8vh;
+        height: 2.5vh;
+    }
+
+    .btn-search {
+        margin: 0.5vh;
+        height: 2.5vh;
+        width: 5vh;
+        padding: 0;
+    }
+
+    .coin-found {
+        grid-column: span 12;
+        grid-row: 3;
+    }
+
+    .choosen-coin-area {
+        margin: 0;
+        grid-row: 1;
+        grid-column-start: 7;
+        grid-column-end: 13;
+        background: rgba(43, 44, 62, 0.5);
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 20% 80%;
+        border-radius: 0;
+    }
+
+    .selected-coins-header {
+        font-size: 2vh;
+    }
+
+    .aside-each-coin-div {
+        height: 2em;
+        width: 100%;
+    }
+
+    .coin-icon {
+        height: 2.2vh;
+    }
+
+    .main-main {
+        margin: 0;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        grid-column: span 12;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 55% 45%;
+    }
+
+    .coin-info {
+        grid-column: span 12;
+        grid-row: 1;
+        margin-bottom: 0.75vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 30% 70%;
+        margin: 0;
+        border-top: 1px solid rgba(230, 230, 230, 0.5);
+        border-bottom: 1px solid rgba(230, 230, 230, 0.5);
+    }
+
+    .Currency-rate {
+        margin: 0;
+        grid-row: 1;
+        grid-column: span 12;
+        background: rgba(43, 44, 62, 0.5);
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 20% 80%;
+    }
+
+    .main-para-head-div {
+        grid-column: span 12;
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-para-Currency-rate {
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        font-size: 2vh;
+        margin-top: 2.5vh;
+    }
+
+    .Currency-usd-eur-ils {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 33.33% 33.33% 33.33%;
+        grid-column: span 12;
+    }
+
+    .para-Currency-rate-usd {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6vh;
+        color: white;
+        grid-row: 1;
+        margin: auto;
+    }
+
+    .Currency-rate-usd {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6vh;
+        color: white;
+        grid-row: 1;
+        margin: auto;
+    }
+
+    .coin-currency {
+        margin: 0;
+    }
+
+    .para-Currency-rate-eur {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6vh;
+        color: white;
+        grid-row: 2;
+        margin: auto;
+    }
+
+    .Currency-rate-eur {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6vh;
+        color: white;
+        grid-row: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin: auto;
+    }
+
+    .para-Currency-rate-ils {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6vh;
+        color: white;
+        grid-row: 3;
+        margin: auto;
+    }
+
+    .Currency-rate-ils {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6vh;
+        color: white;
+        grid-row: 3;
+        margin: auto;
+    }
+
+    .chart {
+        border-top: 1px solid rgba(230, 230, 230, 0.5);
+        margin: 0;
+        border-radius: 0;
+        grid-row: 2;
+        grid-column: span 12;
+    }
+
+    .chart-header-coin-name {
+        font-size: 2vh;
+    }
+
+    .chart-coin-icon {
+        width: 2.5vh;
+    }
+
+    .coins-show {
+        border-radius: 0vh;
+        padding: 1vh;
+        row-gap: 0.75vh;
+        grid-column: span 12;
+        background: rgba(43, 44, 62, 0.5);
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        overflow-x: auto;
+        margin: 0;
+        padding: 1vh;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: rgba(43, 44, 62, 0.5);
+        border-radius: 0;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(70, 70, 95, 0.5);
+        border-radius: 0;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(115, 115, 155, 0.5);
+    }
+
+    .coin-container {
+        margin: auto;
+        border-radius: 1vh;
+        width: 14vh;
+        height: 14vh;
+        display: flex;
+        flex-direction: column;
+        background: rgb(226, 226, 226, 0.1);
+        transition: 0.5s;
+        padding: 1vh;
+    }
+
+    .coin-info-toggle {
+        margin: auto;
+        border-radius: 1vh;
+        width: 14vh;
+        height: 14vh;
+        display: flex;
+        flex-direction: column;
+        background: rgb(226, 226, 226, 0.25);
+        transition: 0.5s;
+
+        border: 1px solid rgb(230, 230, 230, 0.3);
+    }
+
+    .coin-info-toggle > .coin-code-name {
+        color: rgba(72, 255, 0, 0.8);
+        justify-self: center;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.8vh;
+        margin: auto;
+    }
+
+    .coin-code-name-toggle {
+        color: rgba(240, 240, 240, 0.8);
+        grid-column-start: 2;
+        grid-row: 1;
+        margin: auto;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.8vh;
+    }
+
+    .coin-container > .coin-name {
+        margin: auto;
+        color: rgba(240, 240, 240, 0.8);
+        font-family: "Montserrat", sans-serif;
+        font-size: 1vh;
+    }
+
+    .coin-info-toggle > .coin-name {
+        color: rgba(240, 240, 240, 0.8);
+        justify-self: flex-start;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1vh;
+        display: none;
+    }
+
+    .coin-info-toggle > .usd-currency-more-info {
+        font-size: 1.15vh;
+        color: white;
+        justify-self: flex-end;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .coin-info-toggle > .eur-currency-more-info {
+        font-size: 1.15vh;
+        color: white;
+        justify-self: flex-end;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+    }
+    .coin-info-toggle > .ils-currency-more-info {
+        font-size: 1.15vh;
+        color: white;
+        justify-self: flex-end;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .btn-primary {
+        grid-column: span 12;
+        grid-row: 3;
+        margin: auto;
+        height: 2.5vh;
+        cursor: pointer;
+        font-size: 1vh;
+    }
+    .coin-info-toggle > .btn-primary {
+        grid-column: span 12;
+        background-color: rgb(145, 145, 145);
+        grid-row: 3;
+        margin: auto;
+        height: 2.5vh;
+        cursor: pointer;
+        font-size: 1vh;
+    }
+
+    .each-coin-from-search {
+        height: 2em;
+    }
+
+    .icon-from-search {
+        height: 2.2vh;
+    }
+
+    .hide-about-me-main-div {
+        display: inherit;
+        position: absolute;
+        z-index: 55;
+        color: white;
+        width: 100vw;
+        height: 25vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 30% 70%;
+    }
+
+    .about-me-content-div {
+        height: 100%;
+        grid-row: 1;
+        grid-column: span 12;
+        background: rgb(245, 245, 245);
+        border-top-left-radius: 1vh;
+        border-top-right-radius: 1vh;
+        border-bottom-left-radius: 0vh;
+        color: rgb(23, 22, 32);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-me-img-div {
+        grid-row: 2;
+        margin: 0vh;
+        grid-column: span 12;
+        background-image: url(./images/post/logo1.152.png);
+        background-size: cover;
+    }
+
+    .about-me-text-content {
+        font-size: 1vh;
+        margin: 0vh;
+    }
+
+    .main-footer {
+        display: none;
+    }
+}

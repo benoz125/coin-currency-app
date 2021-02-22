@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Coins Project</title>
+        <link rel="icon" href="./images/logo.81.png" />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    </head>
+    <body>
+        <div class="main-container">
+            <header class="main-header">
+                <img
+                    class="header-logo"
+                    src="./images/post/logo.81.png"
+                    alt="logo-image"
+                />
+                <div class="about-me-main-div">
+                    <h3 class="about-me-text">About Me</h3>
+                    <div class="burger-container">
+                        <div class="container" onclick="burgerToggle(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div style="display: none" class="hide-about-me-main-div">
+                <div class="about-me-content-div">
+                    <h3 class="about-me-text-content">
+                        Hey, my name is Ben Oz. <br />
+                        In my profession I'm an industrial designer and a 3D
+                        designer. <br />
+                        This project is a coin currency dashboard, which uses
+                        the following languages: HTML, CSS and JS. <br />
+                        In addition I used the jQuery library. <br />
+                        One of my main goals was focusing on the user experience
+                        and ease of use.
+                    </h3>
+                </div>
+                <div class="about-me-img-div"></div>
+            </div>
+
+            <aside class="main-aside">
+                <div class="search-area">
+                    <div class="search-header-div">
+                        <h2 class="search-header">Search coin</h2>
+                    </div>
+                    <div class="search-input-btn-div">
+                        <input
+                            id="search-input"
+                            type="text"
+                            placeholder="Search.."
+                            name="search"
+                            class="search-input"
+                        />
+                        <button
+                            onclick="searchCoin()"
+                            class="btn btn-primary btn-search"
+                        >
+                            Search
+                        </button>
+                    </div>
+                    <div class="coin-from-search"></div>
+                </div>
+                <div class="choosen-coin-area">
+                    <div class="choosen-coin-header-div">
+                        <h2 class="selected-coins-header">Selected coins</h2>
+                    </div>
+                    <div class="choosen-coins-aside-area-div"></div>
+                </div>
+            </aside>
+
+            <main class="main-main">
+                <div class="coin-info">
+                    <div class="Currency-rate">
+                        <div class="main-para-head-div">
+                            <h2 class="main-para-Currency-rate">
+                                Currency rate
+                            </h2>
+                        </div>
+                        <div class="Currency-usd-eur-ils">
+                            <h3 class="para-Currency-rate-usd">USD:</h3>
+                            <div class="Currency-rate-usd">
+                                <p class="coin-currency"></p>
+                            </div>
+                            <h3 class="para-Currency-rate-eur">EUR:</h3>
+                            <div class="Currency-rate-eur">
+                                <p class="coin-currency"></p>
+                            </div>
+                            <h3 class="para-Currency-rate-ils">ILS:</h3>
+                            <div class="Currency-rate-ils">
+                                <p class="coin-currency"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <div class="chart-header-div">
+                            <h2 class="chart-header-coin-name"></h2>
+                            <h2 class="chart-header-coin-icon"></h2>
+                        </div>
+                        <div class="btn-left-div">
+                            <span onclick="slideLeft()" class="btn-left-content"
+                                >&#10092;</span
+                            >
+                        </div>
+                        <div class="chart-info">
+                            <div
+                                id="chartContainer"
+                                class="chartContainer"
+                            ></div>
+                        </div>
+                        <div class="btn-right-div">
+                            <span
+                                onclick="slideRight()"
+                                class="btn-right-content"
+                                >&#10093;</span
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="coins-show"></div>
+            </main>
+
+            <footer class="main-footer">
+                <div class="footer-text-div">
+                    <h3 class="footer-text">
+                        © 2020 Ben Oz All Rights Reserved
+                    </h3>
+                </div>
+            </footer>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+        <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
